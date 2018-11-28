@@ -357,7 +357,7 @@ define({ "api": [
     "title": "Get all site",
     "version": "1.0.0",
     "group": "Site",
-    "name": "List",
+    "name": "Read",
     "parameter": {
       "fields": {
         "Parameter": [
@@ -485,6 +485,153 @@ define({ "api": [
         {
           "title": "Success-Response",
           "content": "HTTP/1.1 200 OK",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-BadRequest",
+          "content": "HTTP/1.1 400 Bad Request\n{\n    \"message\": \"Error Message\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "Error-NotFound",
+          "content": "HTTP/1.1 404 Not Found\n{\n    \"message\": \"Error Message\"\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "get",
+    "url": "/v1/dl/dealers/:dealer_id/statistics",
+    "title": "Get dealer statistics",
+    "version": "1.0.0",
+    "group": "Statistics",
+    "name": "Dealer",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "dealer_id",
+            "description": "<p>딜러 아이디</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "dealer"
+      }
+    ],
+    "filename": "src/controllers/statistics.js",
+    "groupTitle": "Statistics",
+    "sampleRequest": [
+      {
+        "url": "https://api.chektdev.com/v1/dl/dealers/:dealer_id/statistics"
+      }
+    ],
+    "header": {
+      "examples": [
+        {
+          "title": "Header-Content-Type",
+          "content": "Content-Type: application/json",
+          "type": "String"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Array-Response",
+          "content": "HTTP/1.1 200 OK\n[{\n    Json String Array\n}]",
+          "type": "json"
+        },
+        {
+          "title": "Success-Response",
+          "content": "HTTP/1.1 200 OK\n{\n    Json String\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-BadRequest",
+          "content": "HTTP/1.1 400 Bad Request\n{\n    \"message\": \"Error Message\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "Error-NotFound",
+          "content": "HTTP/1.1 404 Not Found\n{\n    \"message\": \"Error Message\"\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "get",
+    "url": "/v1/dl/dealers/:dealer_id/sites/:site_id/statistics",
+    "title": "Get site statistics",
+    "version": "1.0.0",
+    "group": "Statistics",
+    "name": "Site",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "dealer_id",
+            "description": "<p>딜러 아이디</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "site_id",
+            "description": "<p>사이트 아이디</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "dealer"
+      }
+    ],
+    "filename": "src/controllers/statistics.js",
+    "groupTitle": "Statistics",
+    "sampleRequest": [
+      {
+        "url": "https://api.chektdev.com/v1/dl/dealers/:dealer_id/sites/:site_id/statistics"
+      }
+    ],
+    "header": {
+      "examples": [
+        {
+          "title": "Header-Content-Type",
+          "content": "Content-Type: application/json",
+          "type": "String"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Array-Response",
+          "content": "HTTP/1.1 200 OK\n[{\n    Json String Array\n}]",
+          "type": "json"
+        },
+        {
+          "title": "Success-Response",
+          "content": "HTTP/1.1 200 OK\n{\n    Json String\n}",
           "type": "json"
         }
       ]
