@@ -1,7 +1,7 @@
 define({ "api": [
   {
     "type": "post",
-    "url": "/v1/dl/analyses",
+    "url": "/dl/v1/analyses",
     "title": "Create a analysis",
     "version": "1.0.0",
     "group": "Analysis",
@@ -15,7 +15,7 @@ define({ "api": [
     "groupTitle": "Analysis",
     "sampleRequest": [
       {
-        "url": "https://api.chektdev.com/v1/dl/analyses"
+        "url": "https://api.chektdev.com/dl/v1/analyses"
       }
     ],
     "header": {

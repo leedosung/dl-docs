@@ -1,7 +1,7 @@
 define({ "api": [
   {
     "type": "get",
-    "url": "/v1/dl/dealers/:dealer_id/events",
+    "url": "/dl/v1/dealers/:dealer_id/events",
     "title": "Get all event for dealer",
     "version": "1.0.0",
     "group": "Event",
@@ -28,7 +28,7 @@ define({ "api": [
     "groupTitle": "Event",
     "sampleRequest": [
       {
-        "url": "https://api.chektdev.com/v1/dl/dealers/:dealer_id/events"
+        "url": "https://api.chektdev.com/dl/v1/dealers/:dealer_id/events"
       }
     ],
     "header": {
@@ -71,7 +71,7 @@ define({ "api": [
   },
   {
     "type": "put",
-    "url": "/v1/dl/dealers/:dealer_id/events/:event_id",
+    "url": "/dl/v1/dealers/:dealer_id/events/:event_id",
     "title": "Update a event",
     "version": "1.0.0",
     "group": "Event",
@@ -105,7 +105,7 @@ define({ "api": [
     "groupTitle": "Event",
     "sampleRequest": [
       {
-        "url": "https://api.chektdev.com/v1/dl/dealers/:dealer_id/events/:event_id"
+        "url": "https://api.chektdev.com/dl/v1/dealers/:dealer_id/events/:event_id"
       }
     ],
     "header": {
@@ -148,7 +148,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/v1/dl/dealers/:dealer_id/sites/:site_id/events",
+    "url": "/dl/v1/dealers/:dealer_id/sites/:site_id/events",
     "title": "Get all event for site",
     "version": "1.0.0",
     "group": "Event",
@@ -182,7 +182,7 @@ define({ "api": [
     "groupTitle": "Event",
     "sampleRequest": [
       {
-        "url": "https://api.chektdev.com/v1/dl/dealers/:dealer_id/sites/:site_id/events"
+        "url": "https://api.chektdev.com/dl/v1/dealers/:dealer_id/sites/:site_id/events"
       }
     ],
     "header": {
@@ -225,7 +225,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/v1/dl/dealers/:dealer_id/members",
+    "url": "/dl/v1/dealers/:dealer_id/members",
     "title": "Create a member",
     "version": "1.0.0",
     "group": "Member",
@@ -268,7 +268,7 @@ define({ "api": [
     "groupTitle": "Member",
     "sampleRequest": [
       {
-        "url": "https://api.chektdev.com/v1/dl/dealers/:dealer_id/members"
+        "url": "https://api.chektdev.com/dl/v1/dealers/:dealer_id/members"
       }
     ],
     "error": {
@@ -288,7 +288,7 @@ define({ "api": [
   },
   {
     "type": "delete",
-    "url": "/v1/dl/dealers/:dealer_id/members/:member_id",
+    "url": "/dl/v1/dealers/:dealer_id/members/:member_id",
     "title": "Delete a member",
     "version": "1.0.0",
     "group": "Member",
@@ -322,7 +322,7 @@ define({ "api": [
     "groupTitle": "Member",
     "sampleRequest": [
       {
-        "url": "https://api.chektdev.com/v1/dl/dealers/:dealer_id/members/:member_id"
+        "url": "https://api.chektdev.com/dl/v1/dealers/:dealer_id/members/:member_id"
       }
     ],
     "header": {
@@ -360,7 +360,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/v1/dl/dealers/:dealer_id/members",
+    "url": "/dl/v1/dealers/:dealer_id/members",
     "title": "Get all member",
     "version": "1.0.0",
     "group": "Member",
@@ -387,7 +387,7 @@ define({ "api": [
     "groupTitle": "Member",
     "sampleRequest": [
       {
-        "url": "https://api.chektdev.com/v1/dl/dealers/:dealer_id/members"
+        "url": "https://api.chektdev.com/dl/v1/dealers/:dealer_id/members"
       }
     ],
     "header": {
@@ -430,7 +430,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/v1/dl/dealers/:dealer_id/sites",
+    "url": "/dl/v1/dealers/:dealer_id/sites",
     "title": "Get all site",
     "version": "1.0.0",
     "group": "Site",
@@ -457,7 +457,7 @@ define({ "api": [
     "groupTitle": "Site",
     "sampleRequest": [
       {
-        "url": "https://api.chektdev.com/v1/dl/dealers/:dealer_id/sites"
+        "url": "https://api.chektdev.com/dl/v1/dealers/:dealer_id/sites"
       }
     ],
     "header": {
@@ -500,7 +500,7 @@ define({ "api": [
   },
   {
     "type": "put",
-    "url": "/v1/dl/dealers/:dealer_id/sites/:site_id",
+    "url": "/dl/v1/dealers/:dealer_id/sites/:site_id",
     "title": "Enable deep learning",
     "version": "1.0.0",
     "group": "Site",
@@ -545,7 +545,7 @@ define({ "api": [
     "groupTitle": "Site",
     "sampleRequest": [
       {
-        "url": "https://api.chektdev.com/v1/dl/dealers/:dealer_id/sites/:site_id"
+        "url": "https://api.chektdev.com/dl/v1/dealers/:dealer_id/sites/:site_id"
       }
     ],
     "header": {
@@ -583,7 +583,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/v1/dl/dealers/:dealer_id/sites/all/statistics",
+    "url": "/dl/v1/dealers/:dealer_id/sites/all/statistics",
     "title": "Get all site statistics",
     "version": "1.0.0",
     "group": "Statistics",
@@ -610,7 +610,7 @@ define({ "api": [
     "groupTitle": "Statistics",
     "sampleRequest": [
       {
-        "url": "https://api.chektdev.com/v1/dl/dealers/:dealer_id/sites/all/statistics"
+        "url": "https://api.chektdev.com/dl/v1/dealers/:dealer_id/sites/all/statistics"
       }
     ],
     "header": {
@@ -653,7 +653,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/v1/dl/dealers/:dealer_id/statistics",
+    "url": "/dl/v1/dealers/:dealer_id/statistics",
     "title": "Get dealer statistics",
     "version": "1.0.0",
     "group": "Statistics",
@@ -680,7 +680,7 @@ define({ "api": [
     "groupTitle": "Statistics",
     "sampleRequest": [
       {
-        "url": "https://api.chektdev.com/v1/dl/dealers/:dealer_id/statistics"
+        "url": "https://api.chektdev.com/dl/v1/dealers/:dealer_id/statistics"
       }
     ],
     "header": {
@@ -723,7 +723,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/v1/dl/dealers/:dealer_id/sites/:site_id/statistics",
+    "url": "/dl/v1/dealers/:dealer_id/sites/:site_id/statistics",
     "title": "Get site statistics",
     "version": "1.0.0",
     "group": "Statistics",
@@ -757,7 +757,7 @@ define({ "api": [
     "groupTitle": "Statistics",
     "sampleRequest": [
       {
-        "url": "https://api.chektdev.com/v1/dl/dealers/:dealer_id/sites/:site_id/statistics"
+        "url": "https://api.chektdev.com/dl/v1/dealers/:dealer_id/sites/:site_id/statistics"
       }
     ],
     "header": {
