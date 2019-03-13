@@ -1,6 +1,153 @@
 [
   {
     "type": "get",
+    "url": "/dl/v1/dealers/:dealer_id/devices",
+    "title": "Get all device for dealer",
+    "version": "1.0.0",
+    "group": "Device",
+    "name": "ReadForDealer",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "dealer_id",
+            "description": "<p>딜러 아이디</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "dealer"
+      }
+    ],
+    "filename": "src/components/device/device.controller.js",
+    "groupTitle": "Device",
+    "sampleRequest": [
+      {
+        "url": "https://api.chektdev.com/dl/v1/dealers/:dealer_id/devices"
+      }
+    ],
+    "header": {
+      "examples": [
+        {
+          "title": "Header-Content-Type",
+          "content": "Content-Type: application/json",
+          "type": "String"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Array-Response",
+          "content": "HTTP/1.1 200 OK\n[{\n    Json String Array\n}]",
+          "type": "json"
+        },
+        {
+          "title": "Success-Response",
+          "content": "HTTP/1.1 200 OK\n{\n    Json String\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-BadRequest",
+          "content": "HTTP/1.1 400 Bad Request\n{\n    \"message\": \"Error Message\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "Error-NotFound",
+          "content": "HTTP/1.1 404 Not Found\n{\n    \"message\": \"Error Message\"\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "get",
+    "url": "/dl/v1/dealers/:dealer_id/sites/:site_id/devices",
+    "title": "Get all device for site",
+    "version": "1.0.0",
+    "group": "Device",
+    "name": "ReadForSite",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "dealer_id",
+            "description": "<p>딜러 아이디</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "site_id",
+            "description": "<p>사이트 아이디</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "dealer"
+      }
+    ],
+    "filename": "src/components/device/device.controller.js",
+    "groupTitle": "Device",
+    "sampleRequest": [
+      {
+        "url": "https://api.chektdev.com/dl/v1/dealers/:dealer_id/sites/:site_id/devices"
+      }
+    ],
+    "header": {
+      "examples": [
+        {
+          "title": "Header-Content-Type",
+          "content": "Content-Type: application/json",
+          "type": "String"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Array-Response",
+          "content": "HTTP/1.1 200 OK\n[{\n    Json String Array\n}]",
+          "type": "json"
+        },
+        {
+          "title": "Success-Response",
+          "content": "HTTP/1.1 200 OK\n{\n    Json String\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-BadRequest",
+          "content": "HTTP/1.1 400 Bad Request\n{\n    \"message\": \"Error Message\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "Error-NotFound",
+          "content": "HTTP/1.1 404 Not Found\n{\n    \"message\": \"Error Message\"\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "get",
     "url": "/dl/v1/dealers/:dealer_id/events",
     "title": "Get all event for dealer",
     "version": "1.0.0",
@@ -24,7 +171,7 @@
         "name": "dealer"
       }
     ],
-    "filename": "src/controllers/event.js",
+    "filename": "src/components/event/event.controller.js",
     "groupTitle": "Event",
     "sampleRequest": [
       {
@@ -101,7 +248,7 @@
         "name": "dealer"
       }
     ],
-    "filename": "src/controllers/event.js",
+    "filename": "src/components/event/event.controller.js",
     "groupTitle": "Event",
     "sampleRequest": [
       {
@@ -178,7 +325,7 @@
         "name": "dealer"
       }
     ],
-    "filename": "src/controllers/event.js",
+    "filename": "src/components/event/event.controller.js",
     "groupTitle": "Event",
     "sampleRequest": [
       {
@@ -264,7 +411,7 @@
         }
       ]
     },
-    "filename": "src/controllers/member.js",
+    "filename": "src/components/member/member.controller.js",
     "groupTitle": "Member",
     "sampleRequest": [
       {
@@ -318,7 +465,7 @@
         "name": "dealer"
       }
     ],
-    "filename": "src/controllers/member.js",
+    "filename": "src/components/member/member.controller.js",
     "groupTitle": "Member",
     "sampleRequest": [
       {
@@ -383,7 +530,7 @@
         "name": "dealer"
       }
     ],
-    "filename": "src/controllers/member.js",
+    "filename": "src/components/member/member.controller.js",
     "groupTitle": "Member",
     "sampleRequest": [
       {
@@ -453,7 +600,7 @@
         "name": "dealer"
       }
     ],
-    "filename": "src/controllers/site.js",
+    "filename": "src/components/site/site.controller.js",
     "groupTitle": "Site",
     "sampleRequest": [
       {
@@ -541,7 +688,7 @@
         "name": "dealer"
       }
     ],
-    "filename": "src/controllers/site.js",
+    "filename": "src/components/site/site.controller.js",
     "groupTitle": "Site",
     "sampleRequest": [
       {
@@ -606,7 +753,7 @@
         "name": "dealer"
       }
     ],
-    "filename": "src/controllers/statistics.js",
+    "filename": "src/components/statistics/statistics.controller.js",
     "groupTitle": "Statistics",
     "sampleRequest": [
       {
@@ -676,11 +823,95 @@
         "name": "dealer"
       }
     ],
-    "filename": "src/controllers/statistics.js",
+    "filename": "src/components/statistics/statistics.controller.js",
     "groupTitle": "Statistics",
     "sampleRequest": [
       {
         "url": "https://api.chektdev.com/dl/v1/dealers/:dealer_id/statistics"
+      }
+    ],
+    "header": {
+      "examples": [
+        {
+          "title": "Header-Content-Type",
+          "content": "Content-Type: application/json",
+          "type": "String"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Array-Response",
+          "content": "HTTP/1.1 200 OK\n[{\n    Json String Array\n}]",
+          "type": "json"
+        },
+        {
+          "title": "Success-Response",
+          "content": "HTTP/1.1 200 OK\n{\n    Json String\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-BadRequest",
+          "content": "HTTP/1.1 400 Bad Request\n{\n    \"message\": \"Error Message\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "Error-NotFound",
+          "content": "HTTP/1.1 404 Not Found\n{\n    \"message\": \"Error Message\"\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "get",
+    "url": "/dl/v1/dealers/:dealer_id/sites/:site_id/devices/:device_id/statistics",
+    "title": "Get device statistics",
+    "version": "1.0.0",
+    "group": "Statistics",
+    "name": "Device",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "dealer_id",
+            "description": "<p>딜러 아이디</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "site_id",
+            "description": "<p>사이트 아이디</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "device_id",
+            "description": "<p>디바이스 아이디</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "dealer"
+      }
+    ],
+    "filename": "src/components/statistics/statistics.controller.js",
+    "groupTitle": "Statistics",
+    "sampleRequest": [
+      {
+        "url": "https://api.chektdev.com/dl/v1/dealers/:dealer_id/sites/:site_id/devices/:device_id/statistics"
       }
     ],
     "header": {
@@ -753,7 +984,7 @@
         "name": "dealer"
       }
     ],
-    "filename": "src/controllers/statistics.js",
+    "filename": "src/components/statistics/statistics.controller.js",
     "groupTitle": "Statistics",
     "sampleRequest": [
       {
